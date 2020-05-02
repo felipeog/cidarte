@@ -242,8 +242,8 @@ footer.container {
 }
 
 .mirante-video {
-  max-width: 55%;
-  height: 315px;
+  width: 480px;
+  height: 270px;
 }
 
 .mirante-secao {
@@ -324,8 +324,7 @@ footer.container {
 }
 
 @media (max-width: 767px) {
-  .mirante-texto,
-  .mirante-video {
+  .mirante-texto {
     min-width: 100%;
   }
 
@@ -334,6 +333,8 @@ footer.container {
   }
 
   .mirante-video {
+    width: 280px;
+    height: 158px;
     margin: 20px 0;
   }
 
@@ -369,14 +370,13 @@ footer.container {
 }
 
 .cor-cidade-video {
-  max-width: 55%;
-  height: 315px;
+  width: 480px;
+  height: 270px;
 }
 
 /*media queries*/
 @media (max-width: 767px) {
-  .cor-cidade-texto,
-  .cor-cidade-video {
+  .cor-cidade-texto {
     min-width: 100%;
   }
 
@@ -385,6 +385,8 @@ footer.container {
   }
 
   .cor-cidade-video {
+    width: 280px;
+    height: 158px;
     margin: 20px 0;
   }
 }
@@ -392,19 +394,26 @@ footer.container {
 /*página arte e pessoas*/
 .arte-pessoas-texto {
   margin-right: 20px;
-  max-width: calc(45% - 20px);
 }
 
 .arte-pessoas-video {
-  max-width: 55%;
-  height: 315px;
+  width: 480px;
+  height: 270px;
+  margin: 0 0 20px 20px;
+  float: right;
 }
 
 /*media queries*/
 @media (max-width: 767px) {
-  .arte-pessoas-texto,
-  .arte-pessoas-video {
+  .arte-pessoas-texto {
     min-width: 100%;
+  }
+
+  .arte-pessoas-video {
+    width: 280px;
+    height: 158px;
+    margin: 0 0 20px;
+    float: none;
   }
 
   .arte-pessoas-texto {

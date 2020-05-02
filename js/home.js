@@ -35,6 +35,7 @@ function changeBackground() {
           : randomIndex + 1
         : randomIndex
 
+    new Image().src = backgrounds[nextIndex]
     document.body.style.backgroundImage = `url(${backgrounds[currentIndex]})`
 
     currentIndex = nextIndex

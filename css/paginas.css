@@ -1,0 +1,451 @@
+/*inicializações*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+figure figcaption {
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-style: italic;
+  line-height: 1.4em;
+}
+
+.flex-container,
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-container {
+  flex-direction: column;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main.container {
+  padding: 40px 20px;
+}
+
+.container > * {
+  flex: 1;
+}
+
+/*media queries*/
+@media (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 320px;
+  }
+}
+
+
+/*tipografia*/
+p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+.titulo-1 {
+  font-size: 2.4em;
+  line-height: 1em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  min-width: 100%;
+}
+
+
+/*barra de navegação*/
+header.container {
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.link-home {
+  max-width: 80px;
+  transition: opacity 0.25s;
+}
+
+.link-home:hover {
+  opacity: 0.75;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#barra-navegacao-toggle {
+  display: none;
+}
+
+#barra-navegacao li {
+  display: inline-block;
+}
+
+#barra-navegacao li + li {
+  margin-left: 15px;
+}
+
+#barra-navegacao a,
+footer a {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  padding: 20px 0;
+  color: black;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+#barra-navegacao a:hover,
+footer a:hover {
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/*media queries*/
+@media (max-width: 959px) {
+  .link-home {
+    max-width: 60px;
+  }
+  
+  #barra-navegacao li + li {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  #barra-navegacao {
+    display: none;
+  }
+  
+  header.container nav {
+    position: relative;
+  }
+  
+  #barra-navegacao.ativa {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: -60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  #barra-navegacao.ativa li {
+    display: block;
+    margin: 0;
+  }
+  
+  #barra-navegacao.ativa li + li {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  #barra-navegacao.ativa li a {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    padding: 15px 0;
+  }
+  
+  #barra-navegacao-toggle {
+    display: block;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    transition: color 0.25s;
+    padding: 15px 0;
+  }
+  
+  #barra-navegacao-toggle:hover {
+    color: rgba(0, 0, 0, 0.75);
+  }
+}
+
+
+/*rodapé*/
+footer.container {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+
+/*conteúdo*/
+.container article {
+  flex-basis: 100%;
+}
+
+.container article + article {
+  margin-top: 40px;
+}
+
+
+/*página a sapucaí*/
+.sapucai-texto {
+  margin-right: 20px;
+  max-width: calc(50% - 20px);
+}
+
+.sapucai-imagem {
+  max-width: 50%;
+}
+
+.sapucai-imagem > * + * {
+  margin-top: 20px;
+}
+
+/*media queries*/
+@media (max-width: 767px) {
+  .sapucai-texto,
+  .sapucai-imagem {
+    min-width: 100%;
+  }
+  
+  .sapucai-texto {
+    margin-right: 0;
+  }
+  
+  .sapucai-imagem {
+    margin-top: 20px;
+  }
+}
+
+
+/*página mirante*/
+.mirante-texto {
+  margin-right: 20px;
+  max-width: calc(45% - 20px);
+}
+
+.mirante-video {
+  max-width: 55%;
+  height: 315px;
+}
+
+.mirante-secao {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100%;
+  padding: 60px 0;
+}
+
+.mirante-secao-titulo {
+  padding: 20px;
+  background-color: skyblue;
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.mirante-secao-titulo h1 {
+  width: 100%;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  align-self: center;
+}
+
+.mirante-secao-titulo.vertical h1 {
+  transform: rotate(-90deg);
+  transform-origin: top center;
+  position: absolute;
+  width: 300%;
+  top: 50%;
+  left: -110%;
+}
+
+.mirante-secao-imagem {
+  padding-left: 20px;
+  flex: 7;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mirante-secao-imagem > * + * {
+  margin-top: 20px;
+}
+
+.mirante-secao-imagem.vertical figure {
+  flex: 1;
+  margin: 0;
+}
+
+.mirante-secao-imagem.vertical figure + figure {
+  margin-left: 20px;
+}
+
+.mirante-secao-imagem.vertical figure img {
+  width: 100%;
+}
+
+.mirante-secao-imagem.horizontal {
+  flex: 2;
+}
+
+.mirante-secao-imagem.horizontal figure {
+  flex: 0 0 100%;
+}
+
+/*media queries*/
+@media (max-width: 959px) {
+  .mirante-secao {
+    padding: 30px 0;
+  }
+  
+  .mirante-secao-titulo h1 {
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 767px) {  
+  .mirante-texto,
+  .mirante-video {
+    min-width: 100%;
+  }
+  
+  .mirante-texto {
+    margin-right: 0;
+  }
+  
+  .mirante-video {
+    margin: 20px 0;
+  }
+  
+  .mirante-secao {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  
+  .mirante-secao-titulo.vertical,
+  .mirante-secao-titulo.horizontal {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .mirante-secao-titulo.vertical h1,
+  .mirante-secao-titulo.horizontal h1 {
+    transform: none;
+    position: static;
+    width: 100%;
+  }
+  
+  .mirante-secao-imagem.vertical,
+  .mirante-secao-imagem.horizontal {
+    flex: auto;
+    padding: 0;
+  }
+}
+
+
+/*página a cor da cidade*/
+.cor-cidade-texto {
+  margin-right: 20px;
+  max-width: calc(45% - 20px);
+}
+
+.cor-cidade-video {
+  max-width: 55%;
+  height: 315px;
+}
+
+/*media queries*/
+@media (max-width: 767px) {  
+  .cor-cidade-texto,
+  .cor-cidade-video {
+    min-width: 100%;
+  }
+  
+  .cor-cidade-texto {
+    margin-right: 0;
+  }
+  
+  .cor-cidade-video {
+    margin: 20px 0;
+  }
+}
+
+
+/*página arte e pessoas*/
+.arte-pessoas-texto {
+  margin-right: 20px;
+  max-width: calc(45% - 20px);
+}
+
+.arte-pessoas-video {
+  max-width: 55%;
+  height: 315px;
+}
+
+/*media queries*/
+@media (max-width: 767px) {  
+  .arte-pessoas-texto,
+  .arte-pessoas-video {
+    min-width: 100%;
+  }
+  
+  .arte-pessoas-texto {
+    margin-right: 0;
+  }
+  
+  .arte-pessoas-video {
+    margin: 20px 0;
+  }
+}
+
+
+/*página créditos*/
+.creditos-imagem,
+.creditos-artigo {
+  max-width: 50%;
+}
+
+.creditos-artigo {
+  padding-left: 20px;
+}
+
+/*media queries*/
+@media (max-width: 767px) {  
+  .creditos-imagem {
+    display: none;
+  }
+
+  .creditos-artigo {
+    min-width: 100%;
+  }
+
+  .creditos-artigo {
+    padding-left: 0;
+  }
+}

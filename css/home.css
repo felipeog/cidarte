@@ -1,0 +1,314 @@
+/*inicializações*/
+/*importação de fonts*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  transition: all .25s ease-in-out;
+}
+
+body {
+  background-image: url(../img/planos-de-fundo/fundo1.png);
+  background-size: cover;
+  background-position: center center;
+  font-family: "Roboto";
+  min-height: 100vh;
+  transition: 2s;
+}
+
+
+/*logo*/
+.logo-cidarte img {
+  display: block;
+  margin: 0 auto;
+  -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.logo-cidarte img:hover {
+  -webkit-filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.75));
+          filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.75));
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+/*media queries*/
+@media (max-width: 1023px) {
+  .logo-cidarte img {
+    width: 190px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 959px) {
+  .logo-cidarte img {
+    width: 150px;
+  }
+}
+
+
+/*container*/
+/* breakpoints: 1440px, 1024px, 960px, 768px, 425px, 320px */
+.flex-container-wrapper {
+  min-height: calc(100vh - 32px); /*32px offset do footer*/
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 32px); /*32px offset do footer*/
+}
+
+.container {
+  margin: 0 auto;
+  width: 1440px;
+  padding: 30px 60px;
+}
+
+/*media queries*/
+@media (max-width: 1439px) {
+  .container {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (max-width: 959px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 425px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 424px) {
+  .container {
+    width: 320px;
+  }
+}
+
+
+/*menu com imagens flutuantes*/
+#imagens-flutuantes {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+#imagens-flutuantes a {
+  color: black;
+}
+
+#imagens-flutuantes li {
+  position: absolute;
+}
+
+#imagens-flutuantes li:hover {
+  z-index: 1;
+}
+
+#imagens-flutuantes li:hover::after {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  border: 10px solid skyblue;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#imagens-flutuantes li img {
+  display: block;
+  width: 100%;
+  -webkit-filter: contrast(1.3) saturate(1.3) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+          filter: contrast(1.3) saturate(1.3) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+#imagens-flutuantes li:hover img {
+  -webkit-filter: grayscale(1) drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+          filter: grayscale(1) drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
+}
+
+/*media queries*/
+@media (max-width: 1439px) {
+  #imagens-flutuantes {
+    height: 340px;
+  }
+}
+
+@media (max-width: 959px) {
+  #imagens-flutuantes {
+    height: 265px;
+  }
+}
+
+@media (max-width: 767px) {
+  #imagens-flutuantes {
+    display: none; /*ocultado em telas menores que 768px*/
+  }
+}
+
+
+/*posicionamento das imagens flutuantes*/
+.cor-cidade {
+  max-width: 37%;
+  left: 0;
+  bottom: 0;
+}
+
+.cor-cidade:hover::after {
+  content: "A\00a0 COR DA\00a0 CIDADE";
+  width: 120px;
+  height: 90px;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.sapucai {
+  max-width: 20%;
+  left: 62%;
+  bottom: 0;
+}
+
+.sapucai:hover::after {
+  content: "A\00a0 SAPUCAÍ";
+  width: 90px;
+  height: 55px;
+  padding: 20px;
+  padding-top: 55px;
+}
+
+.arte-pessoas {
+  max-width: 23%;
+  right: 0;
+  bottom: -10%;
+}
+
+.arte-pessoas:hover::after {
+  content: "ARTE E\00a0 PESSOAS";
+  width: 110px;
+  height: 80px;
+  padding: 20px;
+  padding-top: 50px;
+}
+
+.mirante-arte-urbana {
+  max-width: 50%;
+  bottom: 0;
+  left: 20%;
+}
+
+.mirante-arte-urbana:hover::after {
+  content: "MIRANTE\00a0 DA ARTE\00a0 URBANA";
+  width: 130px;
+  height: 90px;
+  padding: 20px;
+  padding-top: 60px;
+}
+
+
+/*menu mobile*/
+#menu-mobile {
+  display: none; /*ocultado em telas maiores que 767px*/
+}
+
+/*media queries*/
+@media (max-width: 767px) {
+  #menu-mobile {
+    display: block;
+    margin-top: 30px;
+  }
+
+  #menu-mobile li {
+    position: relative;
+  }
+
+  #menu-mobile li::before {
+    content: "";
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-filter: blur(1.5px) contrast(0.75);
+            filter: blur(1.5px) contrast(0.75);
+    display: block;
+    background-size: 200%;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  #menu-mobile li:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-filter: blur(2px) contrast(1);
+            filter: blur(2px) contrast(1);
+  }
+
+  #menu-mobile .mobile-cor-cidade::before {
+    background-image: url(../img/home/cor-cidade.png);
+  }
+
+  #menu-mobile .mobile-sapucai::before {
+    background-image: url(../img/home/sapucai.png);
+  }
+
+  #menu-mobile .mobile-mirante-arte-urbana::before {
+    background-image: url(../img/home/mirante-arte-urbana.png);
+  }
+
+  #menu-mobile .mobile-arte-pessoas::before {
+    background-image: url(../img/home/arte-pessoas.png);
+  }
+
+  #menu-mobile .mobile-conversa-bar::before {
+    background-image: url(../img/home/conversa-bar.png);
+  }
+
+  #menu-mobile li a {
+    display: block;
+    padding: 20px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.25em;
+    color: white;
+    font-weight: bold;
+    text-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+  }
+}
+
+
+/*rodapé*/
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 10px 5px;
+}
+
+footer a:hover {
+  color: white;
+}

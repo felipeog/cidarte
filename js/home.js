@@ -41,10 +41,10 @@ function resizeBackground() {
   const windowWidth = document.body.clientWidth
   const windowHeight = document.body.clientHeight
 
-  for (let i = 0; i < backgrounds.length; i++) {
-    backgrounds[i].style.width = `${windowWidth}px`
-    backgrounds[i].style.height = `${windowHeight}px`
-  }
+  backgrounds.forEach((bg) => {
+    bg.style.width = `${windowWidth}px`
+    bg.style.height = `${windowHeight}px`
+  })
 }
 
 window.onload = () => {

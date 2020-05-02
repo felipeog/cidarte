@@ -11,7 +11,8 @@ function initialAnimation() {
   }, 2000)
 
   setTimeout(function () {
-    body.style.overflow = 'auto'
+    body.style.overflowX = 'hidden'
+    body.style.overflowY = 'overlay'
   }, 4000)
 }
 

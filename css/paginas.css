@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Roboto";
+  font-family: 'Roboto';
 }
 
 img {
@@ -58,7 +58,6 @@ main.container {
   }
 }
 
-
 /*tipografia*/
 p {
   font-size: 1.2em;
@@ -76,7 +75,6 @@ p + p {
   margin-bottom: 1em;
   min-width: 100%;
 }
-
 
 /*barra de navegação*/
 header.container {
@@ -132,7 +130,7 @@ footer a:hover {
   .link-home {
     max-width: 60px;
   }
-  
+
   #barra-navegacao li + li {
     margin-left: 10px;
   }
@@ -142,11 +140,11 @@ footer a:hover {
   #barra-navegacao {
     display: none;
   }
-  
+
   header.container nav {
     position: relative;
   }
-  
+
   #barra-navegacao.ativa {
     display: block;
     position: absolute;
@@ -156,23 +154,23 @@ footer a:hover {
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   #barra-navegacao.ativa li {
     display: block;
     margin: 0;
   }
-  
+
   #barra-navegacao.ativa li + li {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   #barra-navegacao.ativa li a {
     display: block;
     text-align: center;
     font-size: 1em;
     padding: 15px 0;
   }
-  
+
   #barra-navegacao-toggle {
     display: block;
     background: none;
@@ -186,19 +184,17 @@ footer a:hover {
     transition: color 0.25s;
     padding: 15px 0;
   }
-  
+
   #barra-navegacao-toggle:hover {
     color: rgba(0, 0, 0, 0.75);
   }
 }
-
 
 /*rodapé*/
 footer.container {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   padding: 10px 20px;
 }
-
 
 /*conteúdo*/
 .container article {
@@ -208,7 +204,6 @@ footer.container {
 .container article + article {
   margin-top: 40px;
 }
-
 
 /*página a sapucaí*/
 .sapucai-texto {
@@ -230,16 +225,15 @@ footer.container {
   .sapucai-imagem {
     min-width: 100%;
   }
-  
+
   .sapucai-texto {
     margin-right: 0;
   }
-  
+
   .sapucai-imagem {
     margin-top: 20px;
   }
 }
-
 
 /*página mirante*/
 .mirante-texto {
@@ -323,51 +317,50 @@ footer.container {
   .mirante-secao {
     padding: 30px 0;
   }
-  
+
   .mirante-secao-titulo h1 {
     font-size: 1.7em;
   }
 }
 
-@media (max-width: 767px) {  
+@media (max-width: 767px) {
   .mirante-texto,
   .mirante-video {
     min-width: 100%;
   }
-  
+
   .mirante-texto {
     margin-right: 0;
   }
-  
+
   .mirante-video {
     margin: 20px 0;
   }
-  
+
   .mirante-secao {
     flex-direction: column;
     padding: 10px 0;
   }
-  
+
   .mirante-secao-titulo.vertical,
   .mirante-secao-titulo.horizontal {
     flex: 1;
     margin-bottom: 20px;
   }
-  
+
   .mirante-secao-titulo.vertical h1,
   .mirante-secao-titulo.horizontal h1 {
     transform: none;
     position: static;
     width: 100%;
   }
-  
+
   .mirante-secao-imagem.vertical,
   .mirante-secao-imagem.horizontal {
     flex: auto;
     padding: 0;
   }
 }
-
 
 /*página a cor da cidade*/
 .cor-cidade-texto {
@@ -381,21 +374,20 @@ footer.container {
 }
 
 /*media queries*/
-@media (max-width: 767px) {  
+@media (max-width: 767px) {
   .cor-cidade-texto,
   .cor-cidade-video {
     min-width: 100%;
   }
-  
+
   .cor-cidade-texto {
     margin-right: 0;
   }
-  
+
   .cor-cidade-video {
     margin: 20px 0;
   }
 }
-
 
 /*página arte e pessoas*/
 .arte-pessoas-texto {
@@ -409,21 +401,20 @@ footer.container {
 }
 
 /*media queries*/
-@media (max-width: 767px) {  
+@media (max-width: 767px) {
   .arte-pessoas-texto,
   .arte-pessoas-video {
     min-width: 100%;
   }
-  
+
   .arte-pessoas-texto {
     margin-right: 0;
   }
-  
+
   .arte-pessoas-video {
     margin: 20px 0;
   }
 }
-
 
 /*página créditos*/
 .creditos-imagem,
@@ -436,7 +427,7 @@ footer.container {
 }
 
 /*media queries*/
-@media (max-width: 767px) {  
+@media (max-width: 767px) {
   .creditos-imagem {
     display: none;
   }

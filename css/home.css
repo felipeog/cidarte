@@ -4,32 +4,32 @@
 
 * {
   box-sizing: border-box;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 body {
-  background-image: url(../img/planos-de-fundo/fundo1.png);
+  background-image: url(../img/planos-de-fundo/fundo2.jpg);
   background-size: cover;
   background-position: center center;
-  font-family: "Roboto";
+  backdrop-filter: hue-rotate(0deg);
+  font-family: 'Roboto';
   min-height: 100vh;
   transition: 2s;
 }
-
 
 /*logo*/
 .logo-cidarte img {
   display: block;
   margin: 0 auto;
   -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .logo-cidarte img:hover {
   -webkit-filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.75));
-          filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.75));
+  filter: drop-shadow(0 0 7.5px rgba(0, 0, 0, 0.75));
   -webkit-transform: scale(1.025);
-          transform: scale(1.025);
+  transform: scale(1.025);
 }
 
 /*media queries*/
@@ -46,7 +46,6 @@ body {
   }
 }
 
-
 /*container*/
 /* breakpoints: 1440px, 1024px, 960px, 768px, 425px, 320px */
 .flex-container-wrapper {
@@ -61,9 +60,11 @@ body {
 }
 
 .container {
+  opacity: 0;
   margin: 0 auto;
   width: 1440px;
   padding: 30px 60px;
+  transition: 2s;
 }
 
 /*media queries*/
@@ -98,7 +99,6 @@ body {
   }
 }
 
-
 /*menu com imagens flutuantes*/
 #imagens-flutuantes {
   position: relative;
@@ -129,21 +129,23 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #imagens-flutuantes li img {
   display: block;
   width: 100%;
-  -webkit-filter: contrast(1.3) saturate(1.3) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-          filter: contrast(1.3) saturate(1.3) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  -webkit-filter: contrast(1.3) saturate(1.3)
+    drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  filter: contrast(1.3) saturate(1.3) drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 #imagens-flutuantes li:hover img {
-  -webkit-filter: grayscale(1) drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
-          filter: grayscale(1) drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
+  -webkit-filter: grayscale(1) drop-shadow(0 0 5px white)
+    drop-shadow(0 0 10px white);
+  filter: grayscale(1) drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
   -webkit-transform: scale(1.025);
-          transform: scale(1.025);
+  transform: scale(1.025);
 }
 
 /*media queries*/
@@ -165,7 +167,6 @@ body {
   }
 }
 
-
 /*posicionamento das imagens flutuantes*/
 .cor-cidade {
   max-width: 37%;
@@ -174,7 +175,7 @@ body {
 }
 
 .cor-cidade:hover::after {
-  content: "A\00a0 COR DA\00a0 CIDADE";
+  content: 'A\00a0 COR DA\00a0 CIDADE';
   width: 120px;
   height: 90px;
   padding: 20px;
@@ -188,7 +189,7 @@ body {
 }
 
 .sapucai:hover::after {
-  content: "A\00a0 SAPUCAÍ";
+  content: 'A\00a0 SAPUCAÍ';
   width: 90px;
   height: 55px;
   padding: 20px;
@@ -202,7 +203,7 @@ body {
 }
 
 .arte-pessoas:hover::after {
-  content: "ARTE E\00a0 PESSOAS";
+  content: 'ARTE E\00a0 PESSOAS';
   width: 110px;
   height: 80px;
   padding: 20px;
@@ -216,13 +217,12 @@ body {
 }
 
 .mirante-arte-urbana:hover::after {
-  content: "MIRANTE\00a0 DA ARTE\00a0 URBANA";
+  content: 'MIRANTE\00a0 DA ARTE\00a0 URBANA';
   width: 130px;
   height: 90px;
   padding: 20px;
   padding-top: 60px;
 }
-
 
 /*menu mobile*/
 #menu-mobile {
@@ -241,14 +241,14 @@ body {
   }
 
   #menu-mobile li::before {
-    content: "";
+    content: '';
     position: absolute;
     overflow: hidden;
     width: 100%;
     height: 100%;
     z-index: -1;
     -webkit-filter: blur(1.5px) contrast(0.75);
-            filter: blur(1.5px) contrast(0.75);
+    filter: blur(1.5px) contrast(0.75);
     display: block;
     background-size: 200%;
     background-position: center center;
@@ -258,7 +258,7 @@ body {
   #menu-mobile li:hover::before {
     background-color: rgba(0, 0, 0, 0.5);
     -webkit-filter: blur(2px) contrast(1);
-            filter: blur(2px) contrast(1);
+    filter: blur(2px) contrast(1);
   }
 
   #menu-mobile .mobile-cor-cidade::before {
@@ -292,7 +292,6 @@ body {
     text-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
   }
 }
-
 
 /*rodapé*/
 footer {

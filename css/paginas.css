@@ -21,6 +21,10 @@ figure figcaption {
   line-height: 1.4em;
 }
 
+strong {
+  font-weight: bold;
+}
+
 .flex-container,
 .container {
   display: flex;
@@ -77,6 +81,10 @@ p + p {
 }
 
 /*barra de navegação*/
+.header-wrapper {
+  background: #fff;
+}
+
 header.container {
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -426,10 +434,25 @@ footer.container {
 }
 
 /*página créditos*/
+.flex-container.creditos {
+  min-height: 100vh;
+  background-image: url('../img/planos-de-fundo/creditos.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 .creditos-imagem,
 .creditos-artigo {
   max-width: 50%;
 }
+
+/* .creditos-imagem {
+  background-image: url('../img/planos-de-fundo/creditos.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+} */
 
 .creditos-artigo {
   padding-left: 20px;
@@ -437,6 +460,10 @@ footer.container {
 
 /*media queries*/
 @media (max-width: 767px) {
+  .flex-container.creditos {
+    background: none;
+  }
+
   .creditos-imagem {
     display: none;
   }

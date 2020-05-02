@@ -16,16 +16,10 @@ function initialAnimation() {
 }
 
 function changeBackground() {
-  const backgrounds = [
-    'img/planos-de-fundo/fundo1.jpg',
-    'img/planos-de-fundo/fundo2.jpg',
-    'img/planos-de-fundo/fundo3.jpg',
-    'img/planos-de-fundo/fundo4.jpg',
-    'img/planos-de-fundo/fundo5.jpg',
-    'img/planos-de-fundo/fundo6.jpg',
-  ]
+  const backgrounds = document.querySelectorAll('.bg-image')
   let currentIndex = 0
 
+  backgrounds[currentIndex].style.opacity = 1
   setInterval(function () {
     const randomIndex = Math.round(Math.random() * (backgrounds.length - 1))
     const nextIndex =
@@ -35,8 +29,8 @@ function changeBackground() {
           : randomIndex + 1
         : randomIndex
 
-    new Image().src = backgrounds[nextIndex]
-    document.body.style.backgroundImage = `url(${backgrounds[currentIndex]})`
+    backgrounds[currentIndex].style.opacity = 0
+    backgrounds[nextIndex].style.opacity = 1
 
     currentIndex = nextIndex
   }, 6000)

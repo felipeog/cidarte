@@ -41,8 +41,6 @@ function resizeBackground() {
   const windowWidth = document.body.clientWidth
   const windowHeight = document.body.clientHeight
 
-  console.log(windowWidth, windowHeight)
-
   for (let i = 0; i < backgrounds.length; i++) {
     backgrounds[i].style.width = `${windowWidth}px`
     backgrounds[i].style.height = `${windowHeight}px`

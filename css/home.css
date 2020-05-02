@@ -4,7 +4,6 @@
 
 * {
   box-sizing: border-box;
-  transition: all 0.25s ease-in-out;
 }
 
 body {
@@ -18,10 +17,6 @@ body {
 .bg-animation {
   position: relative;
   z-index: -1;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .bg-image {
@@ -31,13 +26,14 @@ body {
   display: block;
   opacity: 0;
   object-fit: cover;
-  transition: 2s;
+  transition: opacity 2s;
 }
 
 /*logo*/
 .logo-cidarte img {
   display: block;
   margin: 0 auto;
+  transition: 200ms;
   -webkit-filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
@@ -163,6 +159,7 @@ body {
   filter: grayscale(1) drop-shadow(0 0 5px white) drop-shadow(0 0 10px white);
   -webkit-transform: scale(1.025);
   transform: scale(1.025);
+  transition: 200ms;
 }
 
 /*media queries*/

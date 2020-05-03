@@ -22,7 +22,7 @@ function changeBackground() {
 
   backgrounds[currentIndex].style.opacity = 1
   setInterval(function () {
-    const randomIndex = Math.round(Math.random() * (backgrounds.length - 1))
+    const randomIndex = Math.floor(Math.random() * backgrounds.length)
     const nextIndex =
       currentIndex === randomIndex
         ? randomIndex + 1 > backgrounds.length

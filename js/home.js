@@ -39,12 +39,11 @@ function changeBackground() {
 
 function resizeBackground() {
   const backgrounds = document.querySelectorAll('.bg-image')
-  const windowWidth = document.body.clientWidth
-  const windowHeight = document.body.clientHeight
+  const { width, height } = document.body.getBoundingClientRect()
 
   backgrounds.forEach((bg) => {
-    bg.style.width = `${windowWidth}px`
-    bg.style.height = `${windowHeight}px`
+    bg.style.width = `${width}px`
+    bg.style.height = `${height}px`
   })
 }
 

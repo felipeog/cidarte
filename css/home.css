@@ -12,6 +12,7 @@ body {
   backdrop-filter: hue-rotate(0deg);
   font-family: 'Roboto';
   min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .bg-animation {
@@ -59,15 +60,12 @@ body {
 
 /*container*/
 /* breakpoints: 1440px, 1024px, 960px, 768px, 425px, 320px */
-.flex-container-wrapper {
-  min-height: calc(100vh - 32px); /*32px offset do footer*/
-}
-
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 32px); /*32px offset do footer*/
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .container {
@@ -240,7 +238,7 @@ body {
   #menu-mobile {
     display: block;
     max-width: 280px;
-    margin: 30px auto 0;
+    margin: 30px auto;
   }
 
   #menu-mobile li {
@@ -303,6 +301,8 @@ body {
 
 /*rodapé*/
 footer {
+  position: absolute;
+  bottom: 0;
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);

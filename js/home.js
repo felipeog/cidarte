@@ -25,7 +25,7 @@ function changeBackground() {
     const randomIndex = Math.floor(Math.random() * backgrounds.length)
     const nextIndex =
       currentIndex === randomIndex
-        ? randomIndex + 1 > backgrounds.length
+        ? randomIndex + 1 >= backgrounds.length
           ? 0
           : randomIndex + 1
         : randomIndex

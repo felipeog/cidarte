@@ -1,6 +1,6 @@
 /*inicializações*/
 /*importação de fonts*/
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Roboto");
 
 * {
   box-sizing: border-box;
@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background-position: center center;
   backdrop-filter: hue-rotate(0deg);
-  font-family: 'Roboto';
+  font-family: "Roboto";
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
@@ -246,7 +246,7 @@ body {
   }
 
   #menu-mobile li::before {
-    content: '';
+    content: "";
     position: absolute;
     overflow: hidden;
     width: 100%;
@@ -306,14 +306,15 @@ footer {
   text-align: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.25);
+  font-size: 0.8em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 footer a {
   display: inline-block;
   text-decoration: none;
-  font-size: 0.8em;
+  padding: 10px 0;
   color: rgba(255, 255, 255, 0.6);
-  padding: 10px 5px;
 }
 
 footer a:hover {

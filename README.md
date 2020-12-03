@@ -1,4 +1,4 @@
-# cidarte
+# Cid'Arte
 
 Website created for an architecture project.
 

@@ -4,7 +4,7 @@ Website created for an architecture project.
 
 ## Live demo
 
-https://cidarte.felipeog.com.br/
+https://cidarte.netlify.app
 
 ## Preview
 
